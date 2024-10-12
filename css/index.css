@@ -172,7 +172,7 @@ footer {
 }
 
 /* Mobile Responsive Adjustments */
-@media only screen and (min-width: 769px) and (max-width: 900px) {
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
     .search-bar input[type="text"] {
         width: 100%!important; /* Full width on small screens */
     }
