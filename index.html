@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Metropolitan City E-Library</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<header>
+    <h1>Metropolitan City E-Library</h1>
+</header>
+
+<div class="container">
+    <!-- Search Bar Section -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search books, journals, and audiobooks..." />
+        <button onclick="showPopup()">Search</button>
+    </div>
+    <!-- Overlay (click anywhere outside to close the pop-up) -->
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+    <!-- The Pop-up itself -->
+    <div class="popup" id="popup">
+        <button class="close-btn" onclick="closePopup()">Close</button>
+        <div class="popup-content">
+            <h2>Search Results</h2>
+            <div class="result">
+                <div>
+                    <h3>Catalyst</h3>
+                    <p>Author: Laurie Halse Anderson</p>
+                </div>
+                <img src="book1.jpg" alt="Book Image 1">
+            </div>
+            <div class="result">
+                <div>
+                    <h3>Phantom</h3>
+                    <p>Author: susan-kay</p>
+                </div>
+                <img src="book2.jpg" alt="Book Image 2">
+            </div>
+            <div class="result">
+                <div>
+                    <h3>Shaken (Mind Reader, #1)</h3>
+                    <p>Author: Susan Hatler</p>
+                </div>
+                <img src="book3.jpg" alt="Book Image 3">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the pop-up
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        // Function to close the pop-up
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+    <!-- Latest Arrivals Section -->
+    <div class="latest-arrivals">
+        <h2 class="section-title">Latest Arrivals</h2>
+        <div class="grid-container">
+            <div class="card">
+                <img src="book1.jpg" alt="Twilight (The Twilight Saga, #1)">
+                <h3>Twilight (The Twilight Saga, #1)</h3>
+                <p>Author: Stephenie Meyer</p>
+            </div>
+            <div class="card">
+                <img src="book2.jpg" alt="Firestarter">
+                <h3>Firestarter</h3>
+                <p>Author: Stephen King</p>
+            </div>
+            <div class="card">
+                <img src="book3.jpg" alt="Waiting">
+                <h3>Waiting</h3>
+                <p>Author: Ha Jin</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Collection Section -->
+    <div class="my-collection">
+        <h2 class="section-title">My Collection</h2>
+        <div class="grid-container">
+            <div class="card">
+                <img src="book4.jpg" alt="Misery">
+                <h3>Misery</h3>
+                <p>Author: Stephen King</p>
+            </div>
+            <div class="card">
+                <img src="book5.jpg" alt="Exodus">
+                <h3>Exodus</h3>
+                <p>Author: Leon Uris</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Center Section -->
+    <div class="help-center">
+        <h2 class="section-title">Help Center</h2>
+        <p>If you have any questions or need assistance, please contact our support team at 888-888-8888.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Metropolitan City E-Library. All Rights Reserved.</p>
+</footer>
+
+
+</body>
+</html>
