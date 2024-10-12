@@ -172,31 +172,31 @@ footer {
 }
 
 /* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
+@media only screen and (min-width: 769px) and (max-width: 1281px) {
     .search-bar input[type="text"] {
-        width: 100%; /* Full width on small screens */
+        width: 100%!important; /* Full width on small screens */
     }
 
     .search-bar button {
-        width: 100%; /* Stack button under input on mobile */
-        margin: 10px 0;
+        width: 100%!important; /* Stack button under input on mobile */
+        margin: 10px 0!important;
     }
 
     .grid-container {
-        flex-direction: column;
-        justify-content: center; /* Stack grid items vertically on mobile */
+        flex-direction: column!important;
+        justify-content: center!important; /* Stack grid items vertically on mobile */
     }
 
     .card {
-        max-width: 100%; /* Allow cards to take full width on mobile */
-        flex: 1 1 100%; /* Ensure cards stack fully on smaller screens */
+        max-width: 100%!important; /* Allow cards to take full width on mobile */
+        flex: 1 1 100%!important; /* Ensure cards stack fully on smaller screens */
     }
 
     footer {
-        position: relative; /* Ensure footer doesn't overlap content on mobile */
+        position: relative!important; /* Ensure footer doesn't overlap content on mobile */
     }
 
     .popup {
-        width: 90%; /* Make pop-up wider on smaller screens */
+        width: 90%!important; /* Make pop-up wider on smaller screens */
     }
 }
