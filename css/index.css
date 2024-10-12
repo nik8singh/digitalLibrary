@@ -1,3 +1,4 @@
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -22,6 +23,7 @@ header {
     margin: 20px 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
 .search-bar input[type="text"] {
@@ -61,6 +63,7 @@ header {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     max-width: 250px;
+    flex: 1 1 calc(33.333% - 20px); /* Adjust for multiple grid columns */
 }
 
 .card img {
@@ -74,12 +77,12 @@ header {
     font-weight: bold;
 }
 
-
-.card:hover, .search-bar button:hover, .result:hover{
+.card:hover,
+.search-bar button:hover,
+.result:hover {
     cursor: pointer;
     background-color: black;
     color: white;
-
 }
 
 footer {
@@ -97,17 +100,7 @@ footer {
     min-height: 200px;
 }
 
-@media (max-width: 768px) {
-    .search-bar input[type="text"] {
-        width: 80%;
-    }
-
-    footer {
-        position: relative;
-    }
-}
-
-/* The overlay that covers the whole page when the pop-up is open */
+/* Pop-up Styles */
 .overlay {
     display: none;
     position: fixed;
@@ -119,7 +112,6 @@ footer {
     z-index: 1;
 }
 
-/* Pop-up window */
 .popup {
     display: none;
     position: fixed;
@@ -134,7 +126,6 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Close button */
 .close-btn {
     background-color: #f44336;
     color: white;
@@ -149,12 +140,10 @@ footer {
     background-color: #d32f2f;
 }
 
-/* Search results content */
 .popup-content {
     margin-top: 20px;
 }
 
-/* Styling for individual search result */
 .result {
     display: flex;
     justify-content: space-between;
@@ -164,17 +153,14 @@ footer {
     background-color: #f1f1f1;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-
 }
 
-/* Book image styling */
 .result img {
     width: 50px;
     height: auto;
     border-radius: 5px;
 }
 
-/* Text within the result */
 .result h3 {
     margin: 0;
     font-weight: bold;
@@ -183,4 +169,34 @@ footer {
 
 .result p {
     margin: 0;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .search-bar input[type="text"] {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .search-bar button {
+        width: 100%; /* Stack button under input on mobile */
+        margin: 10px 0;
+    }
+
+    .grid-container {
+        flex-direction: column;
+        justify-content: center; /* Stack grid items vertically on mobile */
+    }
+
+    .card {
+        max-width: 100%; /* Allow cards to take full width on mobile */
+        flex: 1 1 100%; /* Ensure cards stack fully on smaller screens */
+    }
+
+    footer {
+        position: relative; /* Ensure footer doesn't overlap content on mobile */
+    }
+
+    .popup {
+        width: 90%; /* Make pop-up wider on smaller screens */
+    }
 }
